@@ -70,7 +70,7 @@ copyAddress.addEventListener('click', async () => {
 });
 
 // set count down time remaining as real time
-const target = new Date('jan 22 2023 00:00:00').getTime();
+const target = new Date('jan 22 2023 08:00:00').getTime();
 
 function countDown() {
     const now = new Date().getTime();

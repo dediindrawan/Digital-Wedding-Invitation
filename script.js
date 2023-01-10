@@ -68,3 +68,33 @@ copyAddress.addEventListener('click', async () => {
     const address = document.querySelector('.address').textContent;
     await navigator.clipboard.writeText(address);
 });
+
+// set count down time remaining as real time
+const target = new Date('jan 22 2023 00:00:00').getTime();
+
+function countDown() {
+    const now = new Date().getTime();
+    let gap = target - now;
+
+    let second = 1000;
+    let minute = second * 60;
+    let hour = minute * 60;
+    let day = hour * 24;
+
+    let days = Math.floor(gap / day);
+    let hours = Math.floor((gap % day) / hour);
+    let min = Math.floor((gap % hour) / minute);
+    let sec = Math.floor((gap % minute) / second);
+
+    days = days < 10 ? '0' + days : days;
+    hours = hours < 10 ? '0' + hours : hours;
+    min = min < 10 ? '0' + min : min;
+    sec = sec < 10 ? '0' + sec : sec;
+
+    document.querySelector('.days p').innerHTML = `${days} <br> Hari`
+    document.querySelector('.hours p').innerHTML = `${hours} <br> Jam`
+    document.querySelector('.minutes p').innerHTML = `${min} <br> Menit`
+    document.querySelector('.seconds p').innerHTML = `${sec} <br> Detik`
+}
+
+setInterval(countDown, 1000);

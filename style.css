@@ -84,7 +84,7 @@ i {
   position: fixed;
   z-index: 10;
   top: 0;
-  box-shadow: inset 0 0 50px var(--white-color);
+  box-shadow: inset 0 0 35px var(--white-color);
 }
 
 /* activate pseudo element */
@@ -302,7 +302,6 @@ i {
 .reception-date {
   width: 48%;
   padding: 1em;
-  line-height: 2;
   border-radius: 5px;
   color: var(--grey-color);
   background-color: var(--white-color);

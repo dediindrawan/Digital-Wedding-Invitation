@@ -91,10 +91,14 @@ function countDown() {
     min = min < 10 ? '0' + min : min;
     sec = sec < 10 ? '0' + sec : sec;
 
-    document.querySelector('.days p').innerHTML = `${days} <br> Hari`
-    document.querySelector('.hours p').innerHTML = `${hours} <br> Jam`
-    document.querySelector('.minutes p').innerHTML = `${min} <br> Menit`
-    document.querySelector('.seconds p').innerHTML = `${sec} <br> Detik`
-}
+    document.querySelector('.days p').innerHTML = `${days} <br> Hari`;
+    document.querySelector('.hours p').innerHTML = `${hours} <br> Jam`;
+    document.querySelector('.minutes p').innerHTML = `${min} <br> Menit`;
+    document.querySelector('.seconds p').innerHTML = `${sec} <br> Detik`;
+
+    if (gap == 0) {
+        clearInterval(countDown);
+    };
+};
 
 setInterval(countDown, 1000);

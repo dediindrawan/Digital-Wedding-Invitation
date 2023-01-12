@@ -60,15 +60,9 @@ input {
 
 /* button style */
 button {
-  width: max-content;
   padding: 0.5em;
   border-radius: 5px;
   cursor: pointer;
-  transition: var(--transition);
-}
-
-button:hover {
-  transform: scale(0.95);
 }
 
 /* a href style */
@@ -329,6 +323,7 @@ i {
 
 .reception-akad button[type='submit'],
 .reception-date button[type='submit'] {
+  width: 120px;
   margin-top: 1em;
   color: var(--white-color);
   background: var(--gradient-blue);
@@ -380,6 +375,7 @@ i {
 }
 
 .location button[type='submit'] {
+  width: 120px;
   margin-top: 1em;
   color: var(--white-color);
   background: var(--gradient-blue);
@@ -591,6 +587,7 @@ i {
 
 .bank-transfer button[type='submit'],
 .send-gift button[type='submit'] {
+  width: 160px;
   margin-top: 1em;
   color: var(--white-color);
   background: var(--gradient-blue);
@@ -707,7 +704,7 @@ i {
 }
 
 .group-input button[type='submit'] {
-  padding: 0.5em 1em;
+  width: 120px;
   margin-top: 1em;
   color: var(--white-color);
   background: var(--gradient-blue);
@@ -759,8 +756,8 @@ i {
   align-items: center;
   position: fixed;
   z-index: 2;
-  bottom: 25%;
-  right: 25px;
+  bottom: 15%;
+  right: 15px;
   color: var(--white-color);
   background: var(--gradient-blue);
 }

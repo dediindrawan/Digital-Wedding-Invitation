@@ -17,9 +17,9 @@ backToTop = document.querySelector('.back-to-top');
 window.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollUp) {
-        backToTop.style.bottom = '25px';
+        backToTop.style.bottom = '15px';
     } else {
-        backToTop.style.bottom = '-25%';
+        backToTop.style.bottom = '-15%';
     };
     lastScrollUp = scrollTop;
 });
@@ -43,62 +43,64 @@ for (let i = 0; i < saveDate.length; i++) {
 };
 
 // create copy clipboard when user click button
-const spaceTextBca = setInterval(function () {
-    const copyTextBca = document.querySelector('.copy-btn-bca');
-    const btnTextBca = `<i class="fa-solid fa-clone"></i>Salin Rekening`;
+const copyBtnBca = document.querySelector('.copy-btn-bca');
+const btnTextBca = `<i class="fa-solid fa-clone"></i>Salin Rekening`;
+const copiedTextBca = `<i class="fa-solid fa-clone"></i>Berhasil di Salin`;
 
-    copyTextBca.addEventListener('click', function () {
+const spaceTextBca = setInterval(function () {
+    copyBtnBca.addEventListener('click', function () {
         const noBca = document.querySelector('.no-bca').innerHTML;
         navigator.clipboard.writeText(noBca);
 
-        copyTextBca.innerHTML = `<i class="fa-solid fa-clone"></i>Berhasil di Salin`;
+        copyBtnBca.innerHTML = copiedTextBca;
     });
 
-    if (btnTextBca != copyTextBca) {
-        clearInterval(copyTextBca);
-        copyTextBca.innerHTML = btnTextBca;
+    if (btnTextBca != copiedTextBca) {
+        clearInterval();
+        copyBtnBca.innerHTML = btnTextBca;
     };
 
-}, 1500);
+}, 2000);
 
 // create copy clipboard when user click button
-const spaceTextBni = setInterval(function () {
-    const copyBtnBni = document.querySelector('.copy-btn-bni');
-    const btnTextBni = `<i class="fa-solid fa-clone"></i>Salin Rekening`;
+const copyBtnBni = document.querySelector('.copy-btn-bni');
+const btnTextBni = `<i class="fa-solid fa-clone"></i>Salin Rekening`;
+const copiedTextBni = `<i class="fa-solid fa-clone"></i>Berhasil di Salin`;
 
+const spaceTextBni = setInterval(function () {
     copyBtnBni.addEventListener('click', function () {
         const noBni = document.querySelector('.no-bni').innerHTML;
         navigator.clipboard.writeText(noBni);
 
-        copyBtnBni.innerHTML = `<i class="fa-solid fa-clone"></i>Berhasil di Salin`;
+        copyBtnBni.innerHTML = copiedTextBni;
     });
 
-    if (btnTextBni != copyBtnBni) {
-        clearInterval(copyBtnBni);
+    if (btnTextBni != copiedTextBni) {
+        clearInterval();
         copyBtnBni.innerHTML = btnTextBni;
     };
 
-}, 1500);
+}, 2000);
 
 // create copy clipboard when user click button
-const changeText = setInterval(function () {
-    const copyBtnAddress = document.querySelector('.copy-btn-address');
-    const backText = `<i class="fa-solid fa-clone"></i>Salin Alamat`;
+const copyBtnAddress = document.querySelector('.copy-btn-address');
+const btnTextAddress = `<i class="fa-solid fa-clone"></i>Salin Alamat`;
+const copiedTextAddress = `<i class="fa-solid fa-clone"></i>Berhasil di Salin`;
 
+const spaceTextAddress = setInterval(function () {
     copyBtnAddress.addEventListener('click', function () {
         const address = document.querySelector('.address').innerHTML;
         navigator.clipboard.writeText(address);
 
-        copyBtnAddress.innerHTML = `<i class="fa-solid fa-clone"></i>Berhasil di Salin`;
+        copyBtnAddress.innerHTML = copiedTextAddress;
     });
 
-    if (backText != copyBtnAddress) {
-        clearInterval(copyBtnAddress);
-
-        copyBtnAddress.innerHTML = backText;
+    if (btnTextAddress != copiedTextAddress) {
+        clearInterval();
+        copyBtnAddress.innerHTML = btnTextAddress;
     };
 
-}, 1500);
+}, 2000);
 
 // set count down time remaining as real time
 const target = new Date('Jan 22 2023 08:00:00').getTime();

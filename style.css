@@ -19,6 +19,7 @@
   --green-color: #2a8e9d;
   --grey-color: #374050;
   --orange-color: #fc6e51;
+  --gradient-blue: linear-gradient(#53b3db, #3b83d3);
   --font-roboto: 'Roboto', sans-serif;
   --font-alex-brush: 'Great Vibes', cursive;
   --font-size: 1rem;
@@ -272,8 +273,9 @@ i {
 .wrapper-date {
   width: 100%;
   padding: 2em 0;
-  color: var(--white-color);
+  color: var(--grey-color);
   background-color: var(--grey-color);
+  background: var(--gradient-blue);
 }
 
 .date-text {
@@ -345,7 +347,9 @@ i {
   flex-direction: column;
   justify-content: center;
   border-radius: 5px;
+  color: var(--white-color);
   border: 2px solid var(--white-color);
+  background-color: var(--grey-color);
 }
 
 /* wrapper-location style */
@@ -385,8 +389,8 @@ i {
 .wrapper-story {
   width: 100%;
   padding: 2em 0;
-  color: var(--white-color);
-  background-color: var(--grey-color);
+  color: var(--grey-color);
+  background: var(--gradient-blue);
 }
 
 /* story-text style */
@@ -699,8 +703,8 @@ i {
 .wrapper-footer {
   width: 100%;
   position: relative;
-  color: var(--white-color);
-  background-color: var(--grey-color);
+  color: var(--grey-color);
+  background: var(--gradient-blue);
 }
 
 .footer-text {
@@ -725,7 +729,7 @@ i {
 }
 
 .credits a {
-  color: var(--white-color);
+  color: var(--grey-color);
 }
 
 .credits i {
@@ -743,10 +747,11 @@ i {
   z-index: 2;
   bottom: 25%;
   right: 25px;
-  background-color: var(--green-color);
+  background-color: var(--grey-color);
 }
 
 .back-to-top i {
+  color: var(--white-color);
   font-size: 1.5rem;
 }
 
@@ -777,7 +782,8 @@ i {
   }
 
   .greeting-image img {
-    width: 100%;
+    width: 70%;
+    margin-left: 1em;
   }
 
   .greeting-text {
@@ -785,7 +791,7 @@ i {
   }
 
   .greeting-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .ladies-image,
@@ -794,13 +800,19 @@ i {
     flex-direction: column;
   }
 
+  .ladies-image img,
+  .men-image img {
+    width: 150px;
+    height: 150px;
+  }
+
   .couple-name {
     width: 100%;
     text-align: center;
   }
 
   .couple-name p:first-child {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .date-text {
@@ -808,7 +820,7 @@ i {
   }
 
   .date-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   /* reception-detail style */
@@ -817,7 +829,7 @@ i {
   }
 
   .reception-detail i {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .reception-akad,
@@ -864,7 +876,7 @@ i {
   }
 
   .story-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   /* story-image style */
@@ -946,7 +958,7 @@ i {
   }
 
   .guest-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .guest-name {
@@ -980,10 +992,6 @@ i {
 
   .contact {
     width: 25%;
-  }
-
-  .credits a {
-    color: var(--white-color);
   }
 }
 

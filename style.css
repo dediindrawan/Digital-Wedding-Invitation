@@ -16,6 +16,8 @@
 /* create route styling */
 :root {
   --gradient-blue: linear-gradient(#53b3db, #3b83d3);
+  --aqua-color: #53b3db;
+  --blue-color: #3b83d3;
   --white-color: #e7eefb;
   --green-color: #2a8e9d;
   --grey-color: #374050;
@@ -62,6 +64,11 @@ button {
   padding: 0.5em;
   border-radius: 5px;
   cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  transform: scale(0.95);
 }
 
 /* a href style */
@@ -171,7 +178,7 @@ i {
   top: 0;
   z-index: -1;
   opacity: 0.5;
-  background: linear-gradient(to top, var(--black-color), transparent);
+  background: linear-gradient(to top, var(--black-color) 5%, transparent);
 }
 
 .hero-detail {
@@ -195,6 +202,7 @@ i {
 
 .greeting-image img {
   width: 35%;
+  margin-right: -1em;
 }
 
 .greeting-text {
@@ -207,8 +215,12 @@ i {
 }
 
 .greeting-text h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 0.2em;
+}
+
+.greeting-text h2 {
+  font-size: 1.85rem;
 }
 
 .couple-detail {
@@ -216,7 +228,7 @@ i {
 }
 
 .couple-detail span {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-family: var(--font-alex-brush);
 }
 
@@ -232,8 +244,8 @@ i {
   text-align: end;
 }
 
-.couple-name p:first-child {
-  font-size: 3rem;
+.couple-name h1 {
+  font-size: 2.3rem;
   font-family: var(--font-alex-brush);
 }
 
@@ -248,8 +260,8 @@ i {
 
 .ladies-image img,
 .men-image img {
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -282,7 +294,7 @@ i {
 }
 
 .date-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-family: var(--font-alex-brush);
 }
 
@@ -295,7 +307,7 @@ i {
 }
 
 .reception-detail i {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .reception-akad,
@@ -396,7 +408,7 @@ i {
 }
 
 .story-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-family: var(--font-alex-brush);
 }
 
@@ -502,7 +514,7 @@ i {
 }
 
 .close i {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   transition: var(--transition);
 }
 
@@ -533,7 +545,7 @@ i {
 
 .swipe-left i,
 .swipe-right i {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   transition: var(--transition);
 }
 
@@ -555,8 +567,8 @@ i {
 }
 
 .protocol-covid img {
-  width: 70%;
-  height: 70%;
+  width: 50%;
+  height: 50%;
   margin: 2em 0;
   border-radius: 5px;
   object-fit: cover;
@@ -570,6 +582,11 @@ i {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.bank-1 img,
+.bank-2 img {
+  width: 50%;
 }
 
 .bank-transfer button[type='submit'],
@@ -593,7 +610,7 @@ i {
 }
 
 .guest-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-family: var(--font-alex-brush);
 }
 
@@ -602,8 +619,9 @@ i {
 }
 
 .guest-text h2 {
-  font-family: var(--font-alex-brush);
+  font-size: 1.85rem;
   margin: 2em 0;
+  font-family: var(--font-alex-brush);
 }
 
 .guest-name {
@@ -625,8 +643,8 @@ i {
 .hadir,
 .tidak-hadir,
 .masih-ragu {
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   padding: 0.5em;
   display: flex;
   flex-direction: column;
@@ -744,7 +762,7 @@ i {
   bottom: 25%;
   right: 25px;
   color: var(--white-color);
-  background-color: var(--grey-color);
+  background: var(--gradient-blue);
 }
 
 .back-to-top i {
@@ -758,7 +776,7 @@ i {
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .wrapper-navbar ul a,
   .wrapper-navbar ul a i {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .hero-detail {
@@ -779,15 +797,15 @@ i {
   }
 
   .greeting-image img {
-    width: 100%;
-  }
-
-  .greeting-text {
-    margin-top: -0.5em;
+    width: 90%;
   }
 
   .greeting-text h1 {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
+  }
+
+  .greeting-text h2 {
+    font-size: 1.35rem;
   }
 
   .ladies-image,
@@ -796,13 +814,31 @@ i {
     flex-direction: column;
   }
 
+  .ladies-image img,
+  .men-image img {
+    width: 125px;
+    height: 125px;
+  }
+
+  .ladies-image img {
+    margin-bottom: 1em;
+  }
+
+  .men-image img {
+    margin-top: 1em;
+  }
+
   .couple-name {
     width: 100%;
     text-align: center;
   }
 
-  .couple-name p:first-child {
-    font-size: 2.25rem;
+  .couple-name h1 {
+    font-size: 1.8rem;
+  }
+
+  .couple-detail span {
+    font-size: 1.8rem;
   }
 
   .date-text {
@@ -810,7 +846,7 @@ i {
   }
 
   .date-text h1 {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
   }
 
   /* reception-detail style */
@@ -819,7 +855,7 @@ i {
   }
 
   .reception-detail i {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
 
   .reception-akad,
@@ -837,7 +873,7 @@ i {
   }
 
   .reception-time h1 {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
   }
 
   .time-remaining {
@@ -847,8 +883,11 @@ i {
   }
 
   .days,
-  .hours {
-    margin-bottom: 1.8em;
+  .hours,
+  .minutes,
+  .seconds {
+    width: 65px;
+    height: 65px;
   }
 
   /* wrapper-location style */
@@ -866,23 +905,23 @@ i {
   }
 
   .story-text h1 {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
   }
 
   /* story-image style */
   .story-image {
     width: 49%;
-    height: 200px;
+    height: 150px;
   }
 
   /* image-overlay style */
   .image-overlay {
-    height: 200px;
+    height: 150px;
   }
 
   /* tag span story-image style */
   .story-image span {
-    height: 200px;
+    height: 150px;
   }
 
   .story-image span:hover {
@@ -901,7 +940,7 @@ i {
   }
 
   .close i {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
   }
 
   /* swipe-left style */
@@ -916,7 +955,7 @@ i {
 
   .swipe-left i,
   .swipe-right i {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
   }
 
   /* gift-text style */
@@ -925,7 +964,7 @@ i {
   }
 
   .protocol-covid img {
-    width: 100%;
+    width: 90%;
   }
 
   /* bank-transfer style */
@@ -939,7 +978,7 @@ i {
 
   .bank-1 img,
   .bank-2 img {
-    width: 50%;
+    width: 35%;
   }
 
   /* guest-book style */
@@ -948,7 +987,11 @@ i {
   }
 
   .guest-text h1 {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
+  }
+
+  .guest-text h2 {
+    font-size: 1.35rem;
   }
 
   .guest-name {
@@ -963,8 +1006,8 @@ i {
   .hadir,
   .tidak-hadir,
   .masih-ragu {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
   }
 
   /* wrapper-group-input style */
@@ -986,6 +1029,15 @@ i {
 
   .credits a {
     color: var(--white-color);
+  }
+
+  .back-to-top {
+    width: 35px;
+    height: 35px;
+  }
+
+  .back-to-top i {
+    font-size: 1.35rem;
   }
 }
 

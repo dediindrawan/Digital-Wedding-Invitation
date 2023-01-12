@@ -15,16 +15,15 @@
 
 /* create route styling */
 :root {
+  --gradient-blue: linear-gradient(#53b3db, #3b83d3);
   --white-color: #e7eefb;
   --green-color: #2a8e9d;
   --grey-color: #374050;
   --orange-color: #fc6e51;
-  --gradient-blue: linear-gradient(#53b3db, #3b83d3);
   --font-roboto: 'Roboto', sans-serif;
   --font-alex-brush: 'Great Vibes', cursive;
   --font-size: 1rem;
   --transition: all 0.3s;
-  --checkbox-color: #2a8e9d;
   --dark-effect-low-opacity: rgba(0, 0, 0, 0.7);
   --black-color: #000;
 }
@@ -273,8 +272,7 @@ i {
 .wrapper-date {
   width: 100%;
   padding: 2em 0;
-  color: var(--grey-color);
-  background-color: var(--grey-color);
+  color: var(--white-color);
   background: var(--gradient-blue);
 }
 
@@ -347,9 +345,7 @@ i {
   flex-direction: column;
   justify-content: center;
   border-radius: 5px;
-  color: var(--white-color);
   border: 2px solid var(--white-color);
-  background-color: var(--grey-color);
 }
 
 /* wrapper-location style */
@@ -389,7 +385,7 @@ i {
 .wrapper-story {
   width: 100%;
   padding: 2em 0;
-  color: var(--grey-color);
+  color: var(--white-color);
   background: var(--gradient-blue);
 }
 
@@ -703,7 +699,7 @@ i {
 .wrapper-footer {
   width: 100%;
   position: relative;
-  color: var(--grey-color);
+  color: var(--white-color);
   background: var(--gradient-blue);
 }
 
@@ -729,7 +725,7 @@ i {
 }
 
 .credits a {
-  color: var(--grey-color);
+  color: var(--white-color);
 }
 
 .credits i {
@@ -747,11 +743,11 @@ i {
   z-index: 2;
   bottom: 25%;
   right: 25px;
+  color: var(--white-color);
   background-color: var(--grey-color);
 }
 
 .back-to-top i {
-  color: var(--white-color);
   font-size: 1.5rem;
 }
 
@@ -782,8 +778,7 @@ i {
   }
 
   .greeting-image img {
-    width: 70%;
-    margin-left: 1em;
+    width: 100%;
   }
 
   .greeting-text {
@@ -791,7 +786,7 @@ i {
   }
 
   .greeting-text h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .ladies-image,
@@ -800,19 +795,13 @@ i {
     flex-direction: column;
   }
 
-  .ladies-image img,
-  .men-image img {
-    width: 150px;
-    height: 150px;
-  }
-
   .couple-name {
     width: 100%;
     text-align: center;
   }
 
   .couple-name p:first-child {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .date-text {
@@ -820,7 +809,7 @@ i {
   }
 
   .date-text h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   /* reception-detail style */
@@ -829,7 +818,7 @@ i {
   }
 
   .reception-detail i {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .reception-akad,
@@ -876,7 +865,7 @@ i {
   }
 
   .story-text h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   /* story-image style */
@@ -958,7 +947,7 @@ i {
   }
 
   .guest-text h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .guest-name {
@@ -992,6 +981,10 @@ i {
 
   .contact {
     width: 25%;
+  }
+
+  .credits a {
+    color: var(--white-color);
   }
 }
 

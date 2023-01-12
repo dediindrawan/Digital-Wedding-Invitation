@@ -43,37 +43,62 @@ for (let i = 0; i < saveDate.length; i++) {
 };
 
 // create copy clipboard when user click button
-const copyRekBtnBca = document.querySelector('.copy-rek-btn-bca');
+const spaceTextBca = setInterval(function () {
+    const copyTextBca = document.querySelector('.copy-btn-bca');
+    const btnTextBca = `<i class="fa-solid fa-clone"></i>Salin Rekening`;
 
-copyRekBtnBca.addEventListener('click', async () => {
-    alert('Nomor Rekening Berhasil di Salin !!');
-    const noRekBca = document.querySelector('.no-rek-bca').textContent;
-    await navigator.clipboard.writeText(noRekBca);
-    const copied = navigator.clipboard.readText();
-    console.log(copied);
-});
+    copyTextBca.addEventListener('click', function () {
+        const noBca = document.querySelector('.no-bca').innerHTML;
+        navigator.clipboard.writeText(noBca);
 
-// create copy clipboard when user click button
-const copyRekBtnBni = document.querySelector('.copy-rek-btn-bni');
+        copyTextBca.innerHTML = `<i class="fa-solid fa-clone"></i>Berhasil di Salin`;
+    });
 
-copyRekBtnBni.addEventListener('click', async () => {
-    alert('Nomor Rekening Berhasil di Salin !!');
-    const noRekBni = document.querySelector('.no-rek-bni').textContent;
-    await navigator.clipboard.writeText(noRekBni);
-    const copied = navigator.clipboard.readText();
-    console.log(copied);
-});
+    if (btnTextBca != copyTextBca) {
+        clearInterval(copyTextBca);
+        copyTextBca.innerHTML = btnTextBca;
+    };
+
+}, 1500);
 
 // create copy clipboard when user click button
-const copyAddress = document.querySelector('.copy-address-btn');
+const spaceTextBni = setInterval(function () {
+    const copyBtnBni = document.querySelector('.copy-btn-bni');
+    const btnTextBni = `<i class="fa-solid fa-clone"></i>Salin Rekening`;
 
-copyAddress.addEventListener('click', async () => {
-    alert('Alamat Pengiriman Berhasil di Salin !!');
-    const address = document.querySelector('.address').textContent;
-    await navigator.clipboard.writeText(address);
-    const copied = navigator.clipboard.readText();
-    console.log(copied);
-});
+    copyBtnBni.addEventListener('click', function () {
+        const noBni = document.querySelector('.no-bni').innerHTML;
+        navigator.clipboard.writeText(noBni);
+
+        copyBtnBni.innerHTML = `<i class="fa-solid fa-clone"></i>Berhasil di Salin`;
+    });
+
+    if (btnTextBni != copyBtnBni) {
+        clearInterval(copyBtnBni);
+        copyBtnBni.innerHTML = btnTextBni;
+    };
+
+}, 1500);
+
+// create copy clipboard when user click button
+const changeText = setInterval(function () {
+    const copyBtnAddress = document.querySelector('.copy-btn-address');
+    const backText = `<i class="fa-solid fa-clone"></i>Salin Alamat`;
+
+    copyBtnAddress.addEventListener('click', function () {
+        const address = document.querySelector('.address').innerHTML;
+        navigator.clipboard.writeText(address);
+
+        copyBtnAddress.innerHTML = `<i class="fa-solid fa-clone"></i>Berhasil di Salin`;
+    });
+
+    if (backText != copyBtnAddress) {
+        clearInterval(copyBtnAddress);
+
+        copyBtnAddress.innerHTML = backText;
+    };
+
+}, 1500);
 
 // set count down time remaining as real time
 const target = new Date('Jan 22 2023 08:00:00').getTime();

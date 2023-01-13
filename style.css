@@ -752,7 +752,7 @@ i {
   text-transform: capitalize;
   border-radius: 50%;
   border: 2px solid var(--blue-color);
-  background-color: var(--orange-color);
+  background-color: var(--green-color);
 }
 
 .comment-content {
@@ -1173,10 +1173,6 @@ i {
 @media screen and (min-device-width: 380px) and (max-device-width: 480px) {
   .comment-avatar {
     width: 15%;
-  }
-
-  .comment-avatar h4 {
-    background-color: #2a8e9d;
   }
 
   .comment-content {

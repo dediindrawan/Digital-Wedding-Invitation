@@ -634,7 +634,11 @@ i {
   width: 100%;
   margin: auto;
   margin-top: 2em;
+  padding: .5em;
   text-align: start;
+  border-radius: 5px;
+  border: 1px solid var(--grey-color);
+  background-color: var(--white-color);
 }
 
 /* confirmation-report style */
@@ -755,7 +759,7 @@ i {
 
 .comment-name {
   text-transform: capitalize;
-  border-bottom: 2px solid var(--grey-color);
+  border-bottom: 1px solid var(--grey-color);
 }
 
 .comment-name i {
@@ -775,6 +779,7 @@ i {
 }
 
 .comment-time {
+  text-transform: capitalize;
   display: flex;
   align-items: center;
   font-size: 0.8rem;
@@ -1372,8 +1377,16 @@ i {
     width: 100%;
   }
 
+  .comment-avatar {
+    width: 10%;
+  }
+
+  .comment-content {
+    width: 90%;
+  }
+
   .pagination {
-    width: 75%;
+    width: 50%;
   }
 
   .footer-text {

@@ -674,7 +674,6 @@ i {
 
 .masih-ragu {
   background-color: orange;
-  color: var(--grey-color);
 }
 
 /* wrapper-group-input style */
@@ -784,7 +783,7 @@ i {
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .comment-time i {
@@ -794,7 +793,7 @@ i {
 
 .comment-time button[type='submit'] {
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-left: 1em;
   color: var(--blue-color);
 }

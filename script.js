@@ -24,6 +24,41 @@ window.addEventListener('scroll', function () {
     lastScrollUp = scrollTop;
 });
 
+// set count down time remaining as real time
+const target = new Date('Jan 22 2023 08:00:00').getTime();
+
+const countDown = setInterval(function () {
+    const now = new Date().getTime();
+    const gap = target - now;
+
+    let day = Math.floor(gap / (1000 * 60 * 60 * 24));
+    let hour = Math.floor(gap % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    let minute = Math.floor(gap % (1000 * 60 * 60) / (1000 * 60));
+    let second = Math.floor(gap % (1000 * 60) / 1000);
+
+    day = day < 10 ? '0' + day : day;
+    hour = hour < 10 ? '0' + hour : hour;
+    minute = minute < 10 ? '0' + minute : minute;
+    second = second < 10 ? '0' + second : second;
+
+    document.querySelector('.days p').innerHTML = `${day} <br> Hari`;
+    document.querySelector('.hours p').innerHTML = `${hour} <br> Jam`;
+    document.querySelector('.minutes p').innerHTML = `${minute} <br> Menit`;
+    document.querySelector('.seconds p').innerHTML = `${second} <br> Detik`;
+
+    if (gap <= 0) {
+        clearInterval(countDown);
+
+        document.querySelector('.day-remaining').innerHTML = `Hitung Mundur Selesai <br> Terimakasih Atas Kehadiran Anda`;
+
+        document.querySelector('.days p').innerHTML = `00 <br> Hari`;
+        document.querySelector('.hours p').innerHTML = `00 <br> Jam`;
+        document.querySelector('.minutes p').innerHTML = `00 <br> Menit`;
+        document.querySelector('.seconds p').innerHTML = `00 <br> Detik`;
+    };
+
+}, 1000);
+
 // get map location when user click the button
 const getLocation = document.querySelectorAll('.get-location');
 for (let i = 0; i < getLocation.length; i++) {
@@ -102,37 +137,3 @@ const spaceTextAddress = setInterval(function () {
 
 }, 2000);
 
-// set count down time remaining as real time
-const target = new Date('Jan 22 2023 08:00:00').getTime();
-
-const countDown = setInterval(function () {
-    const now = new Date().getTime();
-    const gap = target - now;
-
-    let day = Math.floor(gap / (1000 * 60 * 60 * 24));
-    let hour = Math.floor(gap % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-    let minute = Math.floor(gap % (1000 * 60 * 60) / (1000 * 60));
-    let second = Math.floor(gap % (1000 * 60) / 1000);
-
-    day = day < 10 ? '0' + day : day;
-    hour = hour < 10 ? '0' + hour : hour;
-    minute = minute < 10 ? '0' + minute : minute;
-    second = second < 10 ? '0' + second : second;
-
-    document.querySelector('.days p').innerHTML = `${day} <br> Hari`;
-    document.querySelector('.hours p').innerHTML = `${hour} <br> Jam`;
-    document.querySelector('.minutes p').innerHTML = `${minute} <br> Menit`;
-    document.querySelector('.seconds p').innerHTML = `${second} <br> Detik`;
-
-    if (gap <= 0) {
-        clearInterval(countDown);
-
-        document.querySelector('.day-remaining').innerHTML = `Hitung Mundur Selesai <br> Terimakasih Atas Kehadiran Anda`;
-
-        document.querySelector('.days p').innerHTML = `00 <br> Hari`;
-        document.querySelector('.hours p').innerHTML = `00 <br> Jam`;
-        document.querySelector('.minutes p').innerHTML = `00 <br> Menit`;
-        document.querySelector('.seconds p').innerHTML = `00 <br> Detik`;
-    };
-
-}, 1000);

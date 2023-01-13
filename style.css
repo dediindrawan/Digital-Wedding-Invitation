@@ -777,7 +777,7 @@ i {
   }
 
   .hero-detail {
-    margin-top: 22em;
+    margin-top: 32em;
   }
 
   .hero-detail h1 {
@@ -1038,6 +1038,238 @@ i {
   }
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-device-width: 768px) and (max-device-width: 992px) and (orientation: landscape) {
+  .wrapper-navbar ul a,
+  .wrapper-navbar ul a i {
+    font-size: 0.8rem;
+  }
+
+  .hero-detail {
+    margin-top: 32em;
+  }
+
+  .hero-detail h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-detail h2 {
+    font-size: 1rem;
+  }
+
+  /* section couple style */
+  #couple {
+    width: 90%;
+  }
+
+  .greeting-image img {
+    width: 40%;
+  }
+
+  .greeting-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .greeting-text h2 {
+    font-size: 1.35rem;
+  }
+
+  .ladies-image img,
+  .men-image img {
+    width: 125px;
+    height: 125px;
+  }
+
+  .ladies-image img {
+    margin-right: 1em;
+  }
+
+  .men-image img {
+    margin-left: 1em;
+  }
+
+  .couple-name {
+    width: 100%;
+  }
+
+  .couple-name h1 {
+    font-size: 1.8rem;
+  }
+
+  .couple-detail span {
+    font-size: 1.8rem;
+  }
+
+  .date-text {
+    width: 90%;
+  }
+
+  .date-text h1 {
+    font-size: 1.8rem;
+  }
+
+  /* reception-detail style */
+  .reception-detail {
+    flex-direction: column;
+  }
+
+  .reception-akad,
+  .reception-date {
+    width: 100%;
+  }
+
+  .reception-date {
+    margin-top: 1em;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    width: 65px;
+    height: 65px;
+  }
+
+  /* wrapper-location style */
+  .wrapper-location {
+    width: 90%;
+  }
+
+  .location {
+    width: 100%;
+  }
+
+  /* story-text style */
+  .story-text {
+    width: 90%;
+  }
+
+  .story-text h1 {
+    font-size: 1.8rem;
+  }
+
+  /* story-image style */
+  .story-image {
+    height: 150px;
+  }
+
+  /* image-overlay style */
+  .image-overlay {
+    height: 150px;
+  }
+
+  /* tag span story-image style */
+  .story-image span {
+    height: 150px;
+  }
+
+  .story-image span:hover {
+    opacity: 0.7;
+  }
+
+  .overlay img {
+    width: 90%;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  /* total-image style */
+  .total-image {
+    left: 5%;
+  }
+
+  .close i {
+    font-size: 1.8rem;
+  }
+
+  /* swipe-left style */
+  .swipe-left {
+    left: 5%;
+  }
+
+  /* swipe-right style */
+  .swipe-right {
+    right: 5%;
+  }
+
+  .swipe-left i,
+  .swipe-right i {
+    font-size: 1.8rem;
+  }
+
+  /* gift-text style */
+  .gift-text {
+    width: 90%;
+  }
+
+  .protocol-covid img {
+    width: 50%;
+  }
+
+  .bank-1 img,
+  .bank-2 img {
+    width: 35%;
+  }
+
+  /* guest-book style */
+  #guest-book {
+    width: 90%;
+  }
+
+  .guest-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .guest-text h2 {
+    font-size: 1.35rem;
+  }
+
+  .guest-name {
+    width: 100%;
+  }
+
+  /* confirmation-report style */
+  .confirmation-report {
+    width: 35%;
+  }
+
+  .hadir,
+  .tidak-hadir,
+  .masih-ragu {
+    width: 75px;
+    height: 75px;
+  }
+
+  /* wrapper-group-input style */
+  .wrapper-group-input {
+    width: 100%;
+  }
+
+  .footer-text {
+    width: 90%;
+  }
+
+  .credits {
+    width: 90%;
+  }
+
+  .contact {
+    width: 15%;
+  }
+
+  .credits a {
+    color: var(--white-color);
+  }
+
+  .back-to-top {
+    width: 35px;
+    height: 35px;
+  }
+
+  .back-to-top i {
+    font-size: 1.35rem;
+  }
+}
 /* link bismillah */
 /* https://i.postimg.cc/mDxtp0vy/bismillah-png-27398.png */
 

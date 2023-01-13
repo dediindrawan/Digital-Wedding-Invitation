@@ -495,45 +495,122 @@
         </div>
         <!-- guest-text end -->
 
-        <!-- display comments length -->
-        <h4>0 Komentar</h4>
+        <!-- container-comment-areas start -->
+        <div class="container-comment-areas">
+            <!-- display comments length -->
+            <h4>0 Komentar</h4>
 
-        <!-- confirmation-report start -->
-        <div class="confirmation-report">
-            <div class="hadir">
-                <p>0</p>
-                <p>Ingin Hadir</p>
+            <!-- confirmation-report start -->
+            <div class="confirmation-report">
+                <div class="hadir">
+                    <p>0</p>
+                    <p>Ingin Hadir</p>
+                </div>
+                <div class="tidak-hadir">
+                    <p>0</p>
+                    <p>Tidak Hadir</p>
+                </div>
+                <div class="masih-ragu">
+                    <p>0</p>
+                    <p>Masih Ragu</p>
+                </div>
             </div>
-            <div class="tidak-hadir">
-                <p>0</p>
-                <p>Tidak Hadir</p>
+            <!-- confirmation-report end -->
+
+            <!-- display guest name -->
+            <h4 class="guest-name">Dedi Indrawan</h4>
+
+            <!-- wrapper-group-input start -->
+            <div class="wrapper-group-input">
+                <!-- group-input start -->
+                <form action="" class="group-input">
+                    <textarea placeholder="Ketik ucapan Anda disini..."></textarea>
+                    <select>
+                        <option selected disabled>Konfirmasi Kehadiran</option>
+                        <option value="Ingin Hadir">Ingin Hadir</option>
+                        <option value="Tidak Hadir">Tidak Hadir</option>
+                        <option value="Masih Ragu">Masih Ragu</option>
+                    </select>
+                    <button type="submit">kirim</button>
+                </form>
+                <!-- group-input end -->
+
+                <!-- wrapper-comment start -->
+                <ul class="wrapper-comment">
+                    <li class="comments">
+                        <div class="comment-avatar">
+                            <h4>a</h4>
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-name">
+                                <h4>ariana<i class="fa-solid fa-circle-xmark"></i></h4>
+                            </div>
+                            <div class="comment-text">
+                                <p>happy wedding putri, maaf ya belum bisa dateng ke acara lo</p>
+                            </div>
+                            <div class="comment-time">
+                                <p><i class="fa-regular fa-clock"></i>2 jam lalu</p>
+                                <button type="submit">balas</button>
+                            </div>
+                        </div>
+                    </li>
+                    <hr style="color: var(--blue-color);">
+                </ul>
+                <ul class="wrapper-comment">
+                    <li class="comments">
+                        <div class="comment-avatar">
+                            <h4>w</h4>
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-name">
+                                <h4>windy<i class="fa-solid fa-circle-check"></i></h4>
+                            </div>
+                            <div class="comment-text">
+                                <p>happy wedding kakak, nanti aku dateng ya ke acara kakakkuuuh.. hehee</p>
+                            </div>
+                            <div class="comment-time">
+                                <p><i class="fa-regular fa-clock"></i>1 jam lalu</p>
+                                <button type="submit">balas</button>
+                            </div>
+                        </div>
+                    </li>
+                    <hr style="color: var(--blue-color);">
+                </ul>
+                <ul class="wrapper-comment">
+                    <li class="comments">
+                        <div class="comment-avatar">
+                            <h4>t</h4>
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-name">
+                                <h4>tasya<i class="fa-solid fa-circle-question"></i></h4>
+                            </div>
+                            <div class="comment-text">
+                                <p>selamat ya putri, maaf belum tau bisa dateng apa gak nanti..</p>
+                            </div>
+                            <div class="comment-time">
+                                <p><i class="fa-regular fa-clock"></i>baru saja</p>
+                                <button type="submit">balas</button>
+                            </div>
+                        </div>
+                    </li>
+                    <hr style="color: var(--blue-color);">
+                </ul>
+                <!-- wrapper-comment end -->
+
+                <!-- pagination start -->
+                <div class="pagination">
+                    <a href=""><i class="fa-solid fa-arrow-left" style="margin-right: .5em;"></i>sebelumnya</a>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">selanjutnya<i class="fa-solid fa-arrow-right" style="margin-left: .5em;"></i></a>
+                    <!-- pagination end -->
+                </div>
             </div>
-            <div class="masih-ragu">
-                <p>0</p>
-                <p>Masih Ragu</p>
-            </div>
+            <!-- wrapper-group-input end -->
         </div>
-        <!-- confirmation-report end -->
-
-        <!-- display guest name -->
-        <h4 class="guest-name">Dedi Indrawan</h4>
-
-        <!-- wrapper-group-input start -->
-        <div class="wrapper-group-input">
-            <!-- group-input start -->
-            <form action="" class="group-input">
-                <textarea placeholder="Ketik ucapan Anda disini..."></textarea>
-                <select>
-                    <option selected disabled>Konfirmasi Kehadiran</option>
-                    <option value="Ingin Hadir">Ingin Hadir</option>
-                    <option value="Tidak Hadir">Tidak Hadir</option>
-                    <option value="Masih Ragu">Masih Ragu</option>
-                </select>
-                <button type="submit">kirim</button>
-            </form>
-            <!-- group-input end -->
-        </div>
-        <!-- wrapper-group-input end -->
+        <!-- container-comment-areas end -->
     </section>
     <!-- section guest-book end -->
 

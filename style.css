@@ -673,7 +673,7 @@ i {
 }
 
 .masih-ragu {
-  background-color: yellow;
+  background-color: orange;
   color: var(--grey-color);
 }
 
@@ -777,7 +777,7 @@ i {
 }
 
 .fa-circle-question {
-  color: yellow;
+  color: orange;
 }
 
 .comment-time {
@@ -1173,6 +1173,10 @@ i {
 @media screen and (min-device-width: 380px) and (max-device-width: 480px) {
   .comment-avatar {
     width: 15%;
+  }
+
+  .comment-avatar h4 {
+    background-color: #2a8e9d;
   }
 
   .comment-content {

@@ -1170,7 +1170,7 @@ i {
 }
 
 /* Extra small devices (phones, 400px and 480px) */
-@media screen and (min-device-width: 400px) and (max-device-width: 480px) {
+@media screen and (min-device-width: 380px) and (max-device-width: 480px) {
   .comment-avatar {
     width: 15%;
   }

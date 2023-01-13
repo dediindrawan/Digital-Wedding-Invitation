@@ -621,6 +621,7 @@ i {
   font-family: var(--font-alex-brush);
 }
 
+/* container-comment-areas style */
 .container-comment-areas {
   width: 50%;
   margin: auto;
@@ -634,7 +635,7 @@ i {
   width: 100%;
   margin: auto;
   margin-top: 2em;
-  padding: .5em;
+  padding: 0.5em;
   text-align: start;
   border-radius: 5px;
   border: 1px solid var(--grey-color);
@@ -723,6 +724,7 @@ i {
   background: var(--gradient-blue);
 }
 
+/* wrapper-comment style */
 .wrapper-comment {
   width: 100%;
   margin-bottom: 1em;
@@ -797,6 +799,7 @@ i {
   color: var(--blue-color);
 }
 
+/* pagination style */
 .pagination {
   width: 70%;
   font-size: 0.8rem;
@@ -1163,6 +1166,17 @@ i {
 
   .back-to-top i {
     font-size: 1.35rem;
+  }
+}
+
+/* Extra small devices (phones, 400px and 480px) */
+@media screen and (min-device-width: 400px) and (max-device-width: 480px) {
+  .comment-avatar {
+    width: 15%;
+  }
+
+  .comment-content {
+    width: 85%;
   }
 }
 

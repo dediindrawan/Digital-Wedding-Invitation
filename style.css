@@ -194,6 +194,13 @@ i {
   text-align: center;
 }
 
+.greeting {
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
 .greeting-image img {
   width: 35%;
   margin-right: -1em;
@@ -219,6 +226,10 @@ i {
 
 .couple-detail {
   margin-top: 2em;
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .couple-detail span {
@@ -280,6 +291,10 @@ i {
   padding: 2em 0;
   color: var(--white-color);
   background: var(--gradient-blue);
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .date-text {
@@ -362,6 +377,10 @@ i {
   padding-top: 2em;
   text-align: start;
   text-transform: capitalize;
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .location {
@@ -395,6 +414,10 @@ i {
   padding: 2em 0;
   color: var(--white-color);
   background: var(--gradient-blue);
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 /* story-text style */
@@ -554,6 +577,10 @@ i {
 .wrapper-gift {
   width: 100%;
   padding: 2em 0;
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 /* gift-text style */
@@ -578,6 +605,17 @@ i {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.send-gift {
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .bank-1 img,
@@ -606,6 +644,13 @@ i {
   padding-top: 60px;
 }
 
+.guest-text {
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
 .guest-text h1 {
   font-size: 2.3rem;
   font-family: var(--font-alex-brush);
@@ -629,6 +674,10 @@ i {
   padding: 1em;
   border-radius: 10px;
   background-color: #d6ecf6;
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .guest-name {
@@ -831,6 +880,10 @@ i {
   margin: auto;
   padding: 2em 0;
   text-align: center;
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .credits {
@@ -873,6 +926,13 @@ i {
 .back-to-top i {
   font-size: 1.5rem;
   color: var(--white-color);
+}
+
+.show-section {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s ease-in-out;
 }
 
 /* ----- breakpoint responsive mobile view */

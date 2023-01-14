@@ -137,3 +137,21 @@ const spaceTextAddress = setInterval(function () {
 
 }, 2000);
 
+// create elements load animation every scroll window
+window.addEventListener('scroll', show);
+
+function show() {
+    let elements = document.querySelectorAll('.element');
+
+    for (let i = 0; i < elements.length; i++) {
+        let heightWindow = window.innerHeight;
+        let gapAboveElement = elements[i].getBoundingClientRect().top;
+        let sizeScroll = 150;
+
+        if (gapAboveElement < heightWindow - sizeScroll) {
+            elements[i].classList.add('show-section');
+        } else {
+            elements[i].classList.remove('show-section');
+        };
+    };
+};

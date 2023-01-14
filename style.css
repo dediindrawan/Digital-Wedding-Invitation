@@ -414,10 +414,6 @@ i {
   padding: 2em 0;
   color: var(--white-color);
   background: var(--gradient-blue);
-  transform: translateY(100px);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 1s ease-in-out;
 }
 
 /* story-text style */

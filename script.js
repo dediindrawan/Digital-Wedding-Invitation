@@ -137,21 +137,135 @@ const spaceTextAddress = setInterval(function () {
 
 }, 2000);
 
-// create elements load animation every scroll window
-window.addEventListener('scroll', show);
+// // create elements load animation every scroll window
+// window.addEventListener('scroll', show);
 
-function show() {
-    let elements = document.querySelectorAll('.element');
+// function show() {
+//     let elements = document.querySelectorAll('.element');
 
-    for (let i = 0; i < elements.length; i++) {
-        let heightWindow = window.innerHeight;
-        let gapAboveElement = elements[i].getBoundingClientRect().top;
-        let sizeScroll = 150;
+//     for (let i = 0; i < elements.length; i++) {
+//         let heightWindow = window.innerHeight;
+//         let gapAboveElement = elements[i].getBoundingClientRect().top;
+//         let sizeScroll = 150;
 
-        if (gapAboveElement < heightWindow - sizeScroll) {
-            elements[i].classList.add('show-section');
-        } else {
-            elements[i].classList.remove('show-section');
+//         if (gapAboveElement < heightWindow - sizeScroll) {
+//             elements[i].classList.add('show-section');
+//         } else {
+//             elements[i].classList.remove('show-section');
+//         };
+//     };
+// };
+
+const commentArray = localStorage.getItem('comments') ? JSON.parse(localStorage.getItem('comments')) : [];
+
+const checkArray = localStorage.getItem('checks') ? JSON.parse(localStorage.getItem('checks')) : [];
+
+const xmarkArray = localStorage.getItem('xmarks') ? JSON.parse(localStorage.getItem('xmarks')) : [];
+
+const doubtArray = localStorage.getItem('questions') ? JSON.parse(localStorage.getItem('questions')) : [];
+
+
+const commentTotal = document.querySelector('.comment-total');
+const guestName = document.querySelector('.guest-name');
+const charName = document.querySelector('char-name');
+const commentInput = document.querySelector('.comment-input');
+const selectOption = document.querySelector('.select-option');
+const hadirOption = document.querySelector('.hadir-option');
+const tidakHadirOption = document.querySelector('.tidak-hadir-option');
+const raguOption = document.querySelector('.ragu-option');
+const wrapperComment = document.querySelector('.wrapper-comment');
+const pagination = document.querySelector('.pagination');
+const btnSendComment = document.querySelector('.btn-send-comment');
+
+window.onload = function () {
+    displayComment();
+    displayTotalComment();
+    activateDeleteBtn();
+    activateReplyBtn();
+};
+
+function displayTotalComment() {
+    let total = '';
+    total = commentArray.length;
+    commentTotal.innerHTML = `${total} Komentar`
+}
+
+btnSendComment.addEventListener('click', () => {
+    if (commentInput.value == '') {
+        alert('Anda harus menulis sesuatu sebelum menekan tombol kirim !!');
+    } else {
+        createcomment(commentInput);
+    };
+});
+
+function createcomment(commentInput) {
+    commentArray.push(commentInput.value);
+    localStorage.setItem('comments', JSON.stringify(commentArray));
+    location.reload();
+};
+
+function displayComment() {
+    let comment = '';
+
+    if (commentArray == 0) {
+        comment +=
+            `
+        <div class="comment-notif">
+            <i class="fa-solid fa-comments"></i>
+            <h5>Belum ada komentar apapun disini !!</h5>
+        </div>
+        `
+
+        wrapperComment.innerHTML = comment;
+
+        pagination.style.display = 'none';
+
+    } else {
+        for (let i = 0; i < commentArray.length; i++) {
+            comment +=
+                `
+            <li class="comments">
+                <div class="comment-avatar">
+                    <h4 class="char-name">${guestName.innerHTML[0]}</h4>
+                </div>
+                <div class="comment-content">
+                    <div class="comment-name">
+                        <h4>${guestName.innerHTML}<i class="fa-solid fa-circle-check"></i></h4>
+                    </div>
+                    <div class="comment-text">
+                        <p>${commentArray[i]}</p>
+                    </div>
+                    <div class="comment-time">
+                        <p><i class="fa-regular fa-clock"></i>2 jam lalu</p>
+                        <button class="reply-btn" type="submit">balas</button>
+                        <button class="delete-btn" type="submit">hapus</button>
+                    </div>
+                </div>
+            </li>
+            <hr style="color: var(--blue-color);">
+            `
         };
+        wrapperComment.innerHTML = comment;
+
+        commentInput.value = ''
+
+        pagination.style.display = 'flex';
     };
 };
+
+function activateDeleteBtn() {
+    let deletedBtn = document.querySelectorAll('.delete-btn');
+    deletedBtn.forEach((db, i) => {
+        db.addEventListener('click', () => {
+            deleteComment(i);
+        });
+    });
+};
+
+function deleteComment(i) {
+    commentArray.splice(i, 1);
+    localStorage.setItem('comments', JSON.stringify(commentArray));
+    location.reload();
+};
+
+

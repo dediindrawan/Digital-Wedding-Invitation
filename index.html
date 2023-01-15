@@ -58,7 +58,7 @@
     <!-- section couple start -->
     <section id="couple">
         <!-- greeting start -->
-        <main class="greeting element">
+        <main class="greeting">
             <!-- greeting-image start -->
             <div class="greeting-image">
                 <img class="bissmillah" src="Image/bismillah.png" alt="image">
@@ -79,7 +79,7 @@
         <!-- greeting end -->
 
         <!-- couple-detail start -->
-        <main class="couple-detail element">
+        <main class="couple-detail">
             <!-- ladies-image start -->
             <figure class="ladies-image">
                 <img src="Image/img.1.jpg" alt="image">
@@ -114,7 +114,7 @@
     <!-- section date start -->
     <section id="date">
         <!-- wrapper-date start -->
-        <div class="wrapper-date element">
+        <div class="wrapper-date">
             <!-- date-text start -->
             <main class="date-text">
                 <h1>Acara</h1>
@@ -181,7 +181,7 @@
         <!-- wrapper-date end -->
 
         <!-- wrapper-location start -->
-        <div class="wrapper-location element">
+        <div class="wrapper-location">
             <!-- location start -->
             <div class="location">
                 <!-- location-detail start -->
@@ -432,7 +432,7 @@
         <!-- wrapper-story end -->
 
         <!-- wrapper-gift start -->
-        <div class="wrapper-gift element">
+        <div class="wrapper-gift">
             <!-- gift-text start -->
             <div class="gift-text">
                 <h3>Protokol Kesehatan</h3>
@@ -451,7 +451,7 @@
                     digital atau alamat kami dibawah ini:</p>
 
                 <!-- bank-transfer start -->
-                <div class="bank-transfer element">
+                <div class="bank-transfer">
                     <div class="bank-1">
                         <img src="Image/bca.png" alt="image">
                         <p>Bank BCA, Atas Nama: Dedi Indrawan</p>
@@ -468,7 +468,7 @@
                 <!-- bank-transfer end -->
 
                 <!-- send-gift start -->
-                <div class="send-gift element">
+                <div class="send-gift">
                     <p>Kirim kado ke Alamat:</p>
                     <h4 class="address">Dedi Indrawan, Jl. Griya Citayam Asri No.19 RT. 008/012 Susukan, Bojong Gede -
                         Bogor 16990</h4>
@@ -485,7 +485,7 @@
     <!-- section guest-book start -->
     <section id="guest-book">
         <!-- guest-text start -->
-        <div class="guest-text element">
+        <div class="guest-text">
             <h1>Buku Tamu</h1>
             <p>Berikan ucapan atau do'a</p>
             <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan
@@ -496,9 +496,9 @@
         <!-- guest-text end -->
 
         <!-- container-comment-areas start -->
-        <div class="container-comment-areas element">
+        <div class="container-comment-areas">
             <!-- display comments length -->
-            <h4>3 Komentar</h4>
+            <h4 class="comment-total"></h4>
 
             <!-- confirmation-report start -->
             <div class="confirmation-report">
@@ -518,83 +518,44 @@
             <!-- confirmation-report end -->
 
             <!-- display guest name -->
-            <h4 class="guest-name">Dedi Indrawan</h4>
+            <h4 class="guest-name">Angelina Jolie</h4>
 
             <!-- wrapper-group-input start -->
             <div class="wrapper-group-input">
                 <!-- group-input start -->
                 <form action="" class="group-input">
-                    <textarea placeholder="Ketik ucapan Anda disini..."></textarea>
-                    <select>
+                    <textarea class="comment-input" placeholder="Ketik ucapan Anda disini..."></textarea>
+                    <select class="select-option">
                         <option selected disabled>Konfirmasi Kehadiran</option>
-                        <option value="Ingin Hadir">Ingin Hadir</option>
-                        <option value="Tidak Hadir">Tidak Hadir</option>
-                        <option value="Masih Ragu">Masih Ragu</option>
+                        <option class="hadir-option" value="Ingin Hadir">Ingin Hadir</option>
+                        <option class="tidak-hadir-option" value="Tidak Hadir">Tidak Hadir</option>
+                        <option class="ragu-option" value="Masih Ragu">Masih Ragu</option>
                     </select>
-                    <button type="submit">kirim</button>
+                    <button class="btn-send-comment" type="submit">kirim</button>
                 </form>
                 <!-- group-input end -->
 
                 <!-- wrapper-comment start -->
                 <ul class="wrapper-comment">
-                    <li class="comments">
+                    <!-- <li class="comments">
                         <div class="comment-avatar">
-                            <h4>a</h4>
+                            <h4 class="char-name">a</h4>
                         </div>
                         <div class="comment-content">
                             <div class="comment-name">
                                 <h4>ariana<i class="fa-solid fa-circle-xmark"></i></h4>
                             </div>
                             <div class="comment-text">
-                                <p>Happy wedding putri, maaf ya belum bisa dateng ke acara lo</p>
+                                <p>${commentArray[i]}</p>
                             </div>
                             <div class="comment-time">
                                 <p><i class="fa-regular fa-clock"></i>2 jam lalu</p>
                                 <button type="submit">balas</button>
+                                <button type="submit">hapus</button>
                             </div>
                         </div>
                     </li>
-                    <hr style="color: var(--blue-color);">
-                </ul>
-                <ul class="wrapper-comment">
-                    <li class="comments">
-                        <div class="comment-avatar">
-                            <h4>w</h4>
-                        </div>
-                        <div class="comment-content">
-                            <div class="comment-name">
-                                <h4>windy<i class="fa-solid fa-circle-check"></i></h4>
-                            </div>
-                            <div class="comment-text">
-                                <p>Happy wedding kakak, nanti aku dateng ya ke acara kakakkuuuh.. hehee</p>
-                            </div>
-                            <div class="comment-time">
-                                <p><i class="fa-regular fa-clock"></i>1 jam lalu</p>
-                                <button type="submit">balas</button>
-                            </div>
-                        </div>
-                    </li>
-                    <hr style="color: var(--blue-color);">
-                </ul>
-                <ul class="wrapper-comment">
-                    <li class="comments">
-                        <div class="comment-avatar">
-                            <h4>t</h4>
-                        </div>
-                        <div class="comment-content">
-                            <div class="comment-name">
-                                <h4>tasya<i class="fa-solid fa-circle-question"></i></h4>
-                            </div>
-                            <div class="comment-text">
-                                <p>Selamat ya putri, maaf belum tau bisa dateng apa gak nanti..</p>
-                            </div>
-                            <div class="comment-time">
-                                <p><i class="fa-regular fa-clock"></i>baru saja</p>
-                                <button type="submit">balas</button>
-                            </div>
-                        </div>
-                    </li>
-                    <hr style="color: var(--blue-color);">
+                    <hr style="color: var(--blue-color);"> -->
                 </ul>
                 <!-- wrapper-comment end -->
 
@@ -618,7 +579,7 @@
     <!-- wrapper-footer start -->
     <footer class="wrapper-footer">
         <!-- footer-text start -->
-        <div class="footer-text element">
+        <div class="footer-text">
             <p>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu
                 sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih
                 dan sayang.</p>

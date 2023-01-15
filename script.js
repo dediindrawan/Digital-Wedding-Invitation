@@ -57,6 +57,10 @@ const countDown = setInterval(function () {
         document.querySelector('.seconds p').innerHTML = `00 <br> Detik`;
     };
 
+    if (second < 60) {
+        document.querySelector('.comment-time p').innerHTML = '<i class="fa-regular fa-clock" style="font-size: 0.7rem"></i>' + second++ + ' detik lalu';
+    }
+
 }, 1000);
 
 // get map location when user click the button
@@ -173,22 +177,20 @@ const selectOption = document.querySelector('.select-option');
 const hadirOption = document.querySelector('.hadir-option');
 const tidakHadirOption = document.querySelector('.tidak-hadir-option');
 const raguOption = document.querySelector('.ragu-option');
+const hadir = document.querySelector('.hadir');
+const tidakHadir = document.querySelector('.tidak-hadir');
+const masihRagu = document.querySelector('.masih-ragu');
+const iconCheck = '<i class="fa-solid fa-circle-check"></i>'
 const wrapperComment = document.querySelector('.wrapper-comment');
 const pagination = document.querySelector('.pagination');
 const btnSendComment = document.querySelector('.btn-send-comment');
 
 window.onload = function () {
-    displayComment();
     displayTotalComment();
+    displayComment();
     activateDeleteBtn();
     activateReplyBtn();
 };
-
-function displayTotalComment() {
-    let total = '';
-    total = commentArray.length;
-    commentTotal.innerHTML = `${total} Komentar`
-}
 
 btnSendComment.addEventListener('click', () => {
     if (commentInput.value == '') {
@@ -236,7 +238,7 @@ function displayComment() {
                         <p>${commentArray[i]}</p>
                     </div>
                     <div class="comment-time">
-                        <p><i class="fa-regular fa-clock"></i>2 jam lalu</p>
+                        <p></p>
                         <button class="reply-btn" type="submit">balas</button>
                         <button class="delete-btn" type="submit">hapus</button>
                     </div>
@@ -247,7 +249,7 @@ function displayComment() {
         };
         wrapperComment.innerHTML = comment;
 
-        commentInput.value = ''
+        commentInput.value = '';
 
         pagination.style.display = 'flex';
     };
@@ -268,4 +270,56 @@ function deleteComment(i) {
     location.reload();
 };
 
+function displayTotalComment() {
+    let total = '';
+    total = commentArray.length;
+    commentTotal.innerHTML = `${total} Komentar`;
+};
 
+hadirOption.addEventListener('click', () => {
+    createTotalHadir();
+});
+
+function createTotalHadir() {
+    checkArray.push(hadirOption);
+    localStorage.setItem('checks', JSON.stringify(checkArray));
+};
+
+function displayTotalHadir() {
+    let totalHadir = 0;
+    totalHadir = checkArray.length;
+    hadir.innerHTML = `${totalHadir} <br> Ingin Hadir`;
+};
+displayTotalHadir();
+
+tidakHadirOption.addEventListener('click', () => {
+    createTotalTidakHadir();
+});
+
+function createTotalTidakHadir() {
+    xmarkArray.push(tidakHadirOption);
+    localStorage.setItem('xmarks', JSON.stringify(xmarkArray));
+};
+
+function displayTotalTidakHadir() {
+    let totalTidakHadir = 0;
+    totalTidakHadir = xmarkArray.length;
+    tidakHadir.innerHTML = `${totalTidakHadir} <br> Tidak Hadir`;
+};
+displayTotalTidakHadir();
+
+raguOption.addEventListener('click', () => {
+    createTotalRagu();
+});
+
+function createTotalRagu() {
+    doubtArray.push(raguOption);
+    localStorage.setItem('questions', JSON.stringify(doubtArray));
+};
+
+function displayTotalRagu() {
+    let totalRagu = 0;
+    totalRagu = doubtArray.length;
+    masihRagu.innerHTML = `${totalRagu} <br> Masih Ragu`;
+};
+displayTotalRagu();

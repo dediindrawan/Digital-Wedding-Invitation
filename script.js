@@ -56,11 +56,6 @@ const countDown = setInterval(function () {
         document.querySelector('.minutes p').innerHTML = `00 <br> Menit`;
         document.querySelector('.seconds p').innerHTML = `00 <br> Detik`;
     };
-
-    if (second < 60) {
-        document.querySelector('.comment-time p').innerHTML = '<i class="fa-regular fa-clock" style="font-size: 0.7rem"></i>' + second++ + ' detik lalu';
-    }
-
 }, 1000);
 
 // get map location when user click the button
@@ -188,8 +183,6 @@ const btnSendComment = document.querySelector('.btn-send-comment');
 window.onload = function () {
     displayTotalComment();
     displayComment();
-    activateDeleteBtn();
-    activateReplyBtn();
 };
 
 btnSendComment.addEventListener('click', () => {
@@ -238,7 +231,7 @@ function displayComment() {
                         <p>${commentArray[i]}</p>
                     </div>
                     <div class="comment-time">
-                        <p></p>
+                        <p><i class="fa-regular fa-clock" style="font-size: 0.7rem"></i>2jam lalu</p>
                         <button class="reply-btn" type="submit">balas</button>
                         <button class="delete-btn" type="submit">hapus</button>
                     </div>
@@ -253,6 +246,8 @@ function displayComment() {
 
         pagination.style.display = 'flex';
     };
+    activateDeleteBtn();
+    activateReplyBtn();
 };
 
 function activateDeleteBtn() {
